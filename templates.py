@@ -43,17 +43,14 @@ list_of_file = [
     "config/schema.yaml",
 
 ]
-
-
 for filepath in list_of_file:
     filepath = Path(filepath)
-    filedir,filename = os.path.split(filepath)
-    print (f"Folder name : {filedir} \nFilename : {filename} ") 
-
+    filedir, filename = os.path.split(filepath)
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
-        if (not os.path.exists(filepath) or (os.path.getsize(filepath) == 0)):
-            with open (filepath, "w") as f:
-                pass
-        else:
-            print(f"File is already present at: {filepath}")
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
+        with open(filepath, "w") as f:
+            pass
+    else:
+        print(f"file is already present at: {filepath}")
+

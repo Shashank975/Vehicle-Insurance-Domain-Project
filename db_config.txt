@@ -1,0 +1,4 @@
+shashanksaad07
+UHWl6RUrYU6faB7V
+conn_str = mongodb+srv://shashanksaad07:<db_password>@cluster0.uhpusil.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+python -m pip install "pymongo[srv]"==3.11
