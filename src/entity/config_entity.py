@@ -5,6 +5,15 @@ from datetime import datetime
 
 TIMESTAMP: str = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
 
+
+"""
+This peice of code will only generate the string of the given paths , it will not create the folder or dir by itself because we use (os.path.join).
+
+
+"""
+
+
+
 @dataclass
 class TrainingPipelineConfig:
     pipeline_name: str = PIPELINE_NAME
