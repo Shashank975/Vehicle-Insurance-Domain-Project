@@ -1,2 +1,5 @@
 conda create --name vehicle_proj python=3.12
 conda activate vehicle_proj
+
+
+# https://github.com/sunnysavita10/Generative-AI-Indepth-Basic-to-Advance

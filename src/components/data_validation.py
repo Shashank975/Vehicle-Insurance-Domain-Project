@@ -23,7 +23,7 @@ class DataValidation:
         try:
             self.data_ingestion_artifact = data_ingestion_artifact
             self.data_validation_config = data_validation_config
-            self._schema_config = read_yaml_file(file_path=SCHEMA_FILE_PATH)
+            self._schema_config =read_yaml_file(file_path=SCHEMA_FILE_PATH)
         except Exception as e:
             raise MyException(e,sys)
 
@@ -95,8 +95,6 @@ class DataValidation:
             logging.info("Starting data validation")
             train_df, test_df = (DataValidation.read_data(file_path=self.data_ingestion_artifact.trained_file_path),
                                  DataValidation.read_data(file_path=self.data_ingestion_artifact.test_file_path))
-            
-
 
             # Checking col len of dataframe for train/test df
             status = self.validate_number_of_columns(dataframe=train_df)
@@ -110,9 +108,6 @@ class DataValidation:
                 validation_error_msg += f"Columns are missing in test dataframe. "
             else:
                 logging.info(f"All required columns present in testing dataframe: {status}")
-
-
-
 
             # Validating col dtype for train/test df
             status = self.is_column_exist(df=train_df)
@@ -134,10 +129,6 @@ class DataValidation:
                 message=validation_error_msg,
                 validation_report_file_path=self.data_validation_config.validation_report_file_path
             )
-
-
-
-            
 
             # Ensure the directory for validation_report_file_path exists
             report_dir = os.path.dirname(self.data_validation_config.validation_report_file_path)
