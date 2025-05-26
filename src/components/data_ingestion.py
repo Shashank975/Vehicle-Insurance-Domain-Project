@@ -36,11 +36,10 @@ class DataIngestion:
             dataframe = my_data.export_collection_as_dataframe(collection_name=
                                                                    self.data_ingestion_config.collection_name)
 
-           """
            
-           This Code will create a 2 Folder name : feature_store and ingested inside the data_ingestion . And give files (csv) wil gonna created itself, whenever the specific attribute is called.  
+        #This Code will create a 2 Folder name : feature_store and ingested inside the data_ingestion . And give files (csv) wil gonna created itself, whenever the specific attribute is called.  
 
-            """
+        
 
             logging.info(f"Shape of dataframe: {dataframe.shape}")
             feature_store_file_path  = self.data_ingestion_config.feature_store_file_path

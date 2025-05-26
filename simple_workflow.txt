@@ -197,6 +197,7 @@ echo $MONGODB_URL
 
 ```powershell
 $env:MONGODB_URL = "mongodb+srv://<username>:<password>@cluster.mongodb.net/"
+$env:MONGODB_URL ="mongodb+srv://shashanksaad07:UHWl6RUrYU6faB7V@cluster0.uhpusil.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 echo $env:MONGODB_URL
 ```
 
